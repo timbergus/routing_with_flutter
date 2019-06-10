@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:routing_with_flutter/routes/route_b.dart';
+
 class ViewA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -9,7 +11,12 @@ class ViewA extends StatelessWidget {
       ),
       body: Center(
         child: RaisedButton(
-          onPressed: () => Navigator.pushNamed(context, '/view_b'),
+          onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ViewB(),
+                ),
+              ),
           color: Colors.green,
           child: Text(
             'Goto View B',

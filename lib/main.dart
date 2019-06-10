@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:routing_with_flutter/routes/route_a.dart';
-import 'package:routing_with_flutter/routes/route_b.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,10 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      routes: {
-        '/': (context) => ViewA(),
-        '/view_b': (context) => ViewB(),
-      },
+      home: ViewA(),
     );
   }
 }
