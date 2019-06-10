@@ -8,11 +8,26 @@ class ViewB extends StatelessWidget {
         title: Text('View B'),
       ),
       body: Center(
-        child: Text(
-          '?',
-          style: TextStyle(
-            fontSize: 150,
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              '?',
+              style: TextStyle(
+                fontSize: 150,
+              ),
+            ),
+            RaisedButton(
+              onPressed: () => Navigator.pop(context),
+              color: Colors.green,
+              child: Text(
+                'Return to View A',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );

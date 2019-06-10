@@ -9,7 +9,7 @@ class ViewA extends StatelessWidget {
       ),
       body: Center(
         child: RaisedButton(
-          onPressed: () => print('Pressed!'),
+          onPressed: () => Navigator.pushNamed(context, '/view_b'),
           color: Colors.green,
           child: Text(
             'Goto View B',
