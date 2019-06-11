@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ViewB extends StatelessWidget {
+
+  final String message;
+
+  ViewB({Key key, this.message}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,9 +17,9 @@ class ViewB extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              '?',
+              '$message',
               style: TextStyle(
-                fontSize: 150,
+                fontSize: 20,
               ),
             ),
             RaisedButton(

@@ -14,7 +14,9 @@ class ViewA extends StatelessWidget {
           onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => ViewB(),
+                  builder: (context) => ViewB(
+                        message: 'Hello User 😄',
+                      ),
                 ),
               ),
           color: Colors.green,
