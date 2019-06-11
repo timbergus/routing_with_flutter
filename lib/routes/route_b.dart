@@ -8,6 +8,9 @@ class ViewB extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final Map args = ModalRoute.of(context).settings.arguments;
+    
     return Scaffold(
       appBar: AppBar(
         title: Text('View B'),
@@ -17,7 +20,7 @@ class ViewB extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              '$message',
+              '${args['message']}',
               style: TextStyle(
                 fontSize: 20,
               ),
